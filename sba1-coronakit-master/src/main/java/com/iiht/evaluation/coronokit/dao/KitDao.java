@@ -85,11 +85,14 @@ public class KitDao {
 public boolean deleteCart() throws ClassNotFoundException, SQLException {
 		
 		String sql = "delete from coronakitdb.cart";
+		String sql1 = "delete from coronakitdb.customerdetail";
 		this.connect();
 		
 		PreparedStatement pstmt = this.jdbcConnection.prepareStatement(sql);
+		PreparedStatement pstmt1 = this.jdbcConnection.prepareStatement(sql1);
 		
 		boolean deleted = pstmt.executeUpdate() > 0;
+		boolean deleted2 = pstmt1.executeUpdate() > 0;
 		
 		pstmt.close();
 		this.disconnect();

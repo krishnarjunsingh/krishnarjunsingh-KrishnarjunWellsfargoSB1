@@ -96,7 +96,10 @@ public class UserController extends HttpServlet {
 	}
 
 	private String showOrderSummary(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub		
+		// TODO Auto-generated method stub	
+		String address = request.getParameter("address");
+		request.getSession().setAttribute("address", address);
+		
 		List<KitDetail> kitDetailList = this.kitDAO.getOrderSummary();
 		request.setAttribute("kitDetailList", kitDetailList);
 		

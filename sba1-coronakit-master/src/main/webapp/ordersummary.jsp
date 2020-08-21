@@ -27,7 +27,8 @@
 <h4>Email = <%=kitDetail1.getEmail() %></h4>
 <h4>Contact = <%=kitDetail1.getContact() %></h4>
 <% } %>
-
+<% String address = session.getAttribute("address").toString(); %>
+<h4>Address = <%=address %></h4>
 <br>
 <p>Details of your Order</p>
 
