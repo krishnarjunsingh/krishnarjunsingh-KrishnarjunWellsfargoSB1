@@ -11,7 +11,11 @@
 <hr/>
 
 
+<%
+String pname = (String) session.getAttribute("pname");
+%>
 
+<h3>Hello! <%= pname %></h3>
 <form action="user?action=ordersummary" method="post">
 	<div>
 	

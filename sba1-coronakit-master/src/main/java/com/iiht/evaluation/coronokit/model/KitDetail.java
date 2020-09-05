@@ -66,17 +66,17 @@ public class KitDetail {
 		this.amount = amount;
 	}
 	
-	public KitDetail(int coronaKitId, int amount) {
-
+	public KitDetail(int coronaKitId,String name, int amount) {
+		this.name = name;
 		this.coronaKitId = coronaKitId;
 		this.amount = amount;
 	}
 	
-	public KitDetail(int coronaKitId, String name, String description, int amount) {
+	public KitDetail(int coronaKitId, String description, String name, int amount) {
 		// TODO Auto-generated constructor stub
 		this.coronaKitId = coronaKitId;
-		this.name = name;
 		this.description = description;
+		this.name = name;
 		this.amount = amount;
 	}
 

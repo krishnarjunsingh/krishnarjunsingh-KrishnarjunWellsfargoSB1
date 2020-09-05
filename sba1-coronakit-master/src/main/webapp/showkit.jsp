@@ -20,12 +20,14 @@ int total = 0;
 	<table border="1" width="100%">
 		<thead>
 		<th>S.No</th>
+		<th>Product Name</th>
 			<th>Product Cost</th>
 		</thead>
 		<tbody>
 			<% for(KitDetail kitDetail : kitDetailList) { %>
 			<tr>
 			<td><%=kitDetail.getCoronaKitId()%></td>
+			<td><%=kitDetail.getname()%></td>
 				<td><%=kitDetail.getAmount()%></td>
 				</tr>
 				<div><input type="hidden" value="<%=total = kitDetail.getAmount()+ total %>" name="id"></div>

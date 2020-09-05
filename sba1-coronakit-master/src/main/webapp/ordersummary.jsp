@@ -17,18 +17,19 @@
 <br>
 
 <%
-		// fetch the shared data
-		List<KitDetail> kitCustList =  (List<KitDetail>) request.getAttribute("kitCustList");
-	%>
-
-<% for(KitDetail kitDetail1 : kitCustList) { %>
-
-<h4>Name = <%=kitDetail1.getName() %></h4>
-<h4>Email = <%=kitDetail1.getEmail() %></h4>
-<h4>Contact = <%=kitDetail1.getContact() %></h4>
-<% } %>
+String pname = (String) session.getAttribute("pname");
+%>
+<h3>Name =  <%= pname %></h3>
+<%
+String pemail = (String) session.getAttribute("pemail");
+%>
+<h3>Email = <%= pemail %></h3>
+<%
+String pcontact = (String) session.getAttribute("pcontact");
+%>
+<h3>Contact = <%= pcontact %></h3>
 <% String address = session.getAttribute("address").toString(); %>
-<h4>Address = <%=address %></h4>
+<h3>Address = <%=address %></h3>
 <br>
 <p>Details of your Order</p>
 
